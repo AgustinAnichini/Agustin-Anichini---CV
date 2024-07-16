@@ -361,6 +361,46 @@ span{
     position: relative;
 }
 
+#\32 020 {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+
+#\32 021 {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#\32 022 {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#\32 023 {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+
+.izquierda{
+    transform: translateX(-100px);
+}
+
+.derecha{
+    transform: translateX(100px);
+}
+
+.visible {
+    opacity: 1 !important; 
+    transform: scale(1) !important; 
+}
+
+
 .timeline-item:last-child{
     margin-bottom: 0;
 }
@@ -420,7 +460,7 @@ span{
     font-size: 15px;
     font-weight: 300;
     line-height: 22px;
-    text-align: justify;
+    text-align: left;
 }
 
 ::-webkit-scrollbar{
@@ -525,7 +565,7 @@ span{
 }
 
 .contacto{
-    background-color: var(--second-bg-color)
+    background-color: var(--bg-color)
 }
 
 .contacto h2{
@@ -570,7 +610,7 @@ span{
     bottom: 0;
     width: 100%;
     padding: 40px  0;
-    background-color: var(--bg-color);
+    background-color: var(--second-bg-color);
 }
 
 .footer .social{
@@ -629,4 +669,57 @@ span{
     text-align: center;
     font-size: 16px;
     color: white;
+}
+
+.habilidades {
+    text-align: center;
+    margin-top: 50px;
+    background-color: var(--second-bg-color);
+    height: max-content;
+}
+
+.lista-habilidades {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px 30px;
+}
+
+.habilidad {
+    text-align: left;
+    width: 200px;
+}
+
+.nombre-habilidad {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.barra-progreso {
+    background-color: #f0f0f0;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progreso-html,
+.progreso-css {
+    width: 80%; 
+    background-color: var(--main-color);
+    height: 100%;
+    transition: width 1s ease-in-out; 
+}
+
+
+.lista-habilidades li {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.lista-habilidades li.visible {
+    opacity: 1 !important;
+    transform: scale(1) !important;
 }
