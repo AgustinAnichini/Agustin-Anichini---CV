@@ -35,14 +35,13 @@
                     web donde pueda contribuir y crecer.</p>
 
                <div class="social-icons">
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://www.linkedin.com/in/agust%C3%ADn-dario-anichini-07ba921b3/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/AgustinAnichini" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.instagram.com/agussanichi_?igsh=aGgzZXBrcmlldmIz" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
                </div>         
 
                <div class="btn-group">
-                    <a href="#" class="btn">Empecemos</a>
-                    <a href="#contact" class="btn">Contacto</a>
+                    <a href="#contacto" class="btn">Empecemos</a>
                </div>
             </div>
 
@@ -93,7 +92,7 @@
                                     de estudios. Durante esta carrera, he formado 
                                     parte de diversos equipos de trabajo para llevar 
                                     a cabo proyectos a nivel cuatrimestral. Puedes  ver algunos de mis trabajos en mi GitHub: 
-                                    <div class="social-icons"><a href="#"><i class='bx bxl-github'></i></a></div>
+                                    <div class="social-icons"><a href="https://github.com/AgustinAnichini" target="_blank"><i class='bx bxl-github'></i></a></div>
                                 </p>
                             </div>
                     </div>
@@ -127,7 +126,7 @@
                             entre personas que han perdido o encontrado una mascota.<br>
                             Durante el desarrollo del proyecto, adquirí valiosas habilidades técnicas, además de mejorar en investigación, trabajo en equipo y comunicación.</p>
                     </div>
-                    <div class="social-icons proyecto"><a href="#"><i class='bx bxl-github'></i></a></div>
+                    <div class="social-icons proyecto"><a href="https://github.com/Fittipaldih/Mascotas-TallerWeb1" target="_blank"><i class='bx bxl-github'></i></a></div>
                 </div>
 
                 <div class="service-box derecha" id="drivedoctor">
@@ -139,7 +138,7 @@
                             para asegurar un desarrollo ágil y estructurado, y realizamos pruebas unitarias y E2E para garantizar la calidad del producto. 
                         <br> Este proyecto me brindó la oportunidad de fortalecer mis competencias técnicas y de liderazgo dentro de un marco de desarrollo ágil.</p>
                     </div>
-                    <div class="social-icons proyecto"><a href="#"><i class='bx bxl-github'></i></a></div>
+                    <div class="social-icons proyecto"><a href="https://github.com/Cpinaud/DriveDoctor" target="_blank"><i class='bx bxl-github'></i></a></div>
                 </div>
 
                 <div class="service-box izquierda" id="sabiondos">
@@ -152,7 +151,7 @@
                                 estadísticas del juego. 
                                 <br>Esta experiencia enriqueció mis habilidades técnicas y de gestión de proyectos, permitiéndome trabajar eficazmente en un entorno colaborativo y desafiante.</p>
                     </div>
-                    <div class="social-icons proyecto"><a href="#"><i class='bx bxl-github'></i></a></div>
+                    <div class="social-icons proyecto"><a href="https://github.com/AgustinAnichini/Sabiondos" target="_blank"><i class='bx bxl-github'></i></a></div>
                 </div>
 
                 <div class="service-box derecha" id="ecommerce">
@@ -164,14 +163,14 @@
                             <br>Esta experiencia me permitió profundizar en conceptos avanzados de JavaScript, así como en tecnologías 
                             complementarias, fortaleciendo mi capacidad para crear soluciones web completas y funcionales.</p>
                     </div>
-                    <div class="social-icons proyecto"><a href="#"><i class='bx bxl-github'></i></a></div>
+                    <div class="social-icons proyecto"><a href="https://github.com/AgustinAnichini/e-commerce" target="_blank"><i class='bx bxl-github'></i></a></div>
                 </div>
 
            </div>
 
         </section>
 
-        <section class="habilidades">
+        <section class="habilidades" id="habilidades">
             <h2 class="heading">Mis <span>Habilidades</span></h2>
             <ul class="lista-habilidades">
                 <li>
@@ -271,25 +270,26 @@
         <section class="contacto" id="contacto">
             <h2 class="heading">Innovemos <span>juntos</span></h2>
              
-            <form action="" class="formContacto">
+            <form action="sendEmail.php" class="formContacto" id="contactForm">
                 <div class="input-group">
                     <div class="input-box">
-                        <input type="text" placeholder="Nombre completo">
-                        <input type="email" placeholder="Email">
+                        <input type="text" name="name" placeholder="Nombre completo" required>
+                        <input type="email" name="email" placeholder="Email" required>
                     </div>
-
                     <div class="input-box">
-                        <input type="tel" placeholder="Numero de telefono">
-                        <input type="text" placeholder="Agendame como">
+                        <input type="tel" name="phone" placeholder="Numero de telefono">
+                        <input type="text" name="agenda" placeholder="Agendame como">
                     </div>
                 </div>
-
                 <div class="input-group-2">
-                        <textarea name="consulta" id="consulta" cols="30" rows="12" placeholder="Como quieres comenzar">
-                        </textarea>
-                        <input type="submit" value="Enviar" class="btn">
+                    <textarea name="consulta" id="consulta" cols="30" rows="12" placeholder="Como quieres comenzar" required></textarea>
+                    <input type="submit" value="Enviar" class="btn">
                 </div>
             </form>
+            
+            <div id="loadingSpinner" class="loading-spinner" style="display: none;"></div>
+            <div id="responseMessage" class="message-box"></div>
+
         </section>
     </main>
 
@@ -301,10 +301,6 @@
             </div>
 
             <ul class="list">
-                <li>
-                    <a href="#sobreMi">FQA</a>
-                </li>
-
                 <li>
                     <a href="#proyectos">Proyectos</a>
                 </li>
@@ -322,5 +318,6 @@
             </p>
     </footer>
     <script src="js/observer.js"></script>
+    <script src="js/email.js"></script>
 </body>
 </html>
